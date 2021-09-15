@@ -1,0 +1,7 @@
+<resources>
+    <string name="common_app_name">三诺健康</string>
+
+    <string name="common_no_data">~暂时还没有数据~</string>
+    <string name="common_load_failed">页面加载失败</string>
+    <string name="common_retry_loading">重新加载</string>
+</resources>

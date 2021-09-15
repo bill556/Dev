@@ -1,0 +1,45 @@
+import com.sino.frame.buildsrc.*
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath ProjectPluginManager.AndroidToolsPlugin
+        classpath ProjectPluginManager.KotlinPlugin
+        classpath ProjectPluginManager.ARouterRegister
+        classpath ProjectPluginManager.HiltPlugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven {
+            credentials {
+                username '611a15ce1069a2b099eba1f8'
+                password '4I8zH2SLrfYV'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2129241-release-RE47dy//'
+        }
+        maven {
+            credentials {
+                username '611a15ce1069a2b099eba1f8'
+                password '4I8zH2SLrfYV'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2129241-snapshot-sklmhh/'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

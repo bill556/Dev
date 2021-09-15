@@ -1,0 +1,10 @@
+include(
+    ":app",
+    ":lib_base",
+    ":lib_common",
+    ":module_main",
+    ":module_home",
+    ":module_service",
+    ":module_find",
+    ":module_me"
+)

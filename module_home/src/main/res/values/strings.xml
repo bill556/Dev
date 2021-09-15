@@ -1,0 +1,4 @@
+<resources>
+    <string name="home_click_add_device">点击添加智能设备</string>
+    <string name="home_input_blood_value">输入血糖值</string>
+</resources>

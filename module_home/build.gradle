@@ -1,0 +1,11 @@
+import com.sino.frame.buildsrc.DependencyConfig
+
+apply from: '../base_module.gradle'
+
+android {
+    resourcePrefix "home_"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  主题色  -->
+    <color name="common_theme">#FFD11F25</color>
+    <!--  次要主题色  -->
+    <color name="common_minor_theme">#FFB3B3B3</color>
+    <!--  背景色  -->
+    <color name="common_bg">#FAFAFA</color>
+    <!-- 白色 -->
+    <color name="common_white">#FFFFFF</color>
+    <!--字体的默认颜色-->
+    <color name="common_text_default">#333333</color>
+    <!--字体的灰色颜色-->
+    <color name="common_text_gray">#C4C4C4</color>
+    <!--默认透明色-->
+    <color name="common_transparent">#00000000</color>
+    <!--默认tab选择上的颜色-->
+    <color name="common_tab_check">#D11F25</color>
+</resources>

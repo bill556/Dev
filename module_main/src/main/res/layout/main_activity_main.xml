@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    tools:context=".ui.activity.MainActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/vBottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@drawable/main_nav_bg"
+        android:theme="@style/main_myNavigationDrawerStyle"
+        app:itemIconSize="24dp"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemTextColor="@color/main_nav_text_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/main_menu_nav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
