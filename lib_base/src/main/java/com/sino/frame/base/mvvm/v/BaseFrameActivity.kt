@@ -9,6 +9,7 @@ import com.sino.frame.base.utils.EventBusRegister
 import com.sino.frame.base.utils.EventBusUtils
 import com.sino.frame.base.utils.network.AutoRegisterNetListener
 import com.sino.frame.base.utils.network.NetworkStateChangeListener
+import com.sino.frame.base.utils.network.NetworkTypeEnum
 import com.sino.frame.base.utils.status.ViewStatusHelper
 import com.sino.frame.base.utils.status.imp.BaseFrameViewStatusHelperImp
 import com.sino.frame.base.utils.toast
@@ -19,7 +20,8 @@ import com.sino.frame.base.utils.toast
  * @author
  * @since 8/27/20
  */
-abstract class BaseFrameActivity<VB : ViewBinding, VM : BaseViewModel> : BaseFrameStatusActivity(), FrameView<VB>, NetworkStateChangeListener {
+abstract class BaseFrameActivity<VB : ViewBinding, VM : BaseViewModel> : BaseFrameStatusActivity(),
+    FrameView<VB>, NetworkStateChangeListener {
 
     protected val mBinding: VB by lazy(mode = LazyThreadSafetyMode.NONE) {
         BindingReflex.reflexViewBinding(javaClass, layoutInflater)
@@ -64,10 +66,10 @@ abstract class BaseFrameActivity<VB : ViewBinding, VM : BaseViewModel> : BaseFra
 
     /**
      * 网络类型更改回调
-     * @param type Int 网络类型
+     * @param type NetworkTypeEnum 网络类型
      * @return Unit
      */
-    override fun networkTypeChange(type: Int) {}
+    override fun networkTypeChange(type: NetworkTypeEnum) {}
 
     /**
      * 网络连接状态更改回调

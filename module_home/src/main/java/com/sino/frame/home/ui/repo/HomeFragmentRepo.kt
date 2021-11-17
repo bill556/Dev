@@ -1,11 +1,9 @@
 package com.sino.frame.home.ui.repo
 
 import com.sino.frame.base.mvvm.m.BaseRepository
-import com.sino.frame.common.helper.responseCodeExceptionHandler
-import com.sino.frame.common.bean.home.AppletsMenuBean
 import com.sino.frame.common.db.dao.AppletsMenuDao
+import com.sino.frame.common.helper.responseCodeExceptionHandler
 import com.sino.frame.home.net.HomeApiService
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 /**
@@ -34,8 +32,9 @@ class HomeFragmentRepo @Inject constructor() : BaseRepository() {
      */
     suspend fun requestTabList() {
         mApi.getTab().run {
-            responseCodeExceptionHandler(code, msg)
-            appletsMenuDao.insert(data)
+            responseCodeExceptionHandler(code, msg, successBlock = {
+                appletsMenuDao.insert(data)
+            })
         }
     }
     //不保存数据库的数据请使用以下方法

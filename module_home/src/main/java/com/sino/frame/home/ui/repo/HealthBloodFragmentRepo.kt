@@ -2,8 +2,8 @@ package com.sino.frame.home.ui.repo
 
 import androidx.lifecycle.MutableLiveData
 import com.sino.frame.base.mvvm.m.BaseRepository
-import com.sino.frame.common.helper.responseCodeExceptionHandler
 import com.sino.frame.common.bean.home.AppletsMenuBean
+import com.sino.frame.common.helper.responseCodeExceptionHandler
 import com.sino.frame.home.net.HomeApiService
 import javax.inject.Inject
 
@@ -30,8 +30,9 @@ class HealthBloodFragmentRepo @Inject constructor() : BaseRepository() {
      */
     suspend fun getTab() = request<List<AppletsMenuBean>> {
         mApi.getTab().run {
-            responseCodeExceptionHandler(code, msg)
-            emit(data)
+            responseCodeExceptionHandler(code, msg, successBlock = {
+                emit(data)
+            })
         }
     }
 }
